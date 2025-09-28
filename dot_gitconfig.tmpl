@@ -1,0 +1,34 @@
+[user]
+	name = TerrariumCode
+	email = 12590206+TerrariumCode@users.noreply.github.com
+{{- if eq .chezmoi.hostname "omarchy" }}
+	signingkey = 4C41CFBBF66BDD2C
+{{- else }}
+	signingkey = FD67DDD6FC9E9DF2
+{{- end }}
+
+[commit]
+	gpgsign = true
+
+[push]
+	autoSetupRemote = true
+	default = upstream
+
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
+[core]
+	editor = nvim
+	pager = diff-so-fancy | less --tabs=4 -RF
+
+[interactive]
+	diffFilter = diff-so-fancy --patch
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[fetch]
+	prune = true
