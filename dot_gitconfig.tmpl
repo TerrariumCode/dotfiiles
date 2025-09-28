@@ -3,6 +3,8 @@
 	email = 12590206+TerrariumCode@users.noreply.github.com
 {{- if eq .chezmoi.hostname "omarchy" }}
 	signingkey = 4C41CFBBF66BDD2C
+{{- else if eq .chezmoi.hostname "HMILSQ-6T9DLHG6" }}
+	signingkey = F2A313003AC88818
 {{- else }}
 	signingkey = FD67DDD6FC9E9DF2
 {{- end }}
