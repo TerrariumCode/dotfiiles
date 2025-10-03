@@ -7,7 +7,7 @@ return {
         },
         config = function()
             local dap_python = require('dap-python')
-            dap_python.setup('~/.virtualenvs/debugpy/bin/python')
+            dap_python.setup("uv")
             dap_python.test_runner = 'pytest'
 
             local dap = require('dap')

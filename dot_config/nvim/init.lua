@@ -1,6 +1,6 @@
 require("config.lazy")
 
--- require("nvim-dap-projects").search_project_config()
+require("nvim-dap-projects").search_project_config()
 
 -- NOTE: add when this is released in newer nvim
 -- vim.lsp.on_type_formatting.enable()
