@@ -7,13 +7,9 @@ return {
         local elixirls = require("elixir.elixirls")
 
         elixir.setup {
-            nextls = {
-                enable = true,
-                cmd = "/home/cmac4603/.local/share/nvim/mason/packages/nextls/next_ls_linux_amd64",
-            },
+            nextls = { enable = true },
             elixirls = {
                 enable = true,
-                cmd = "/home/cmac4603/.local/share/nvim/mason/packages/elixir-ls/language_server.sh",
                 settings = elixirls.settings {
                     dialyzerEnabled = false,
                     enableTestLenses = false,

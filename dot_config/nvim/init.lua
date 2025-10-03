@@ -1,6 +1,6 @@
 require("config.lazy")
 
-require("nvim-dap-projects").search_project_config()
+-- require("nvim-dap-projects").search_project_config()
 
 -- NOTE: add when this is released in newer nvim
 -- vim.lsp.on_type_formatting.enable()
@@ -15,11 +15,13 @@ require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = {
         -- "bacon",
-        -- "bacon-ls",
+        "bacon_ls",
         "basedpyright",
         "cssls",
+        "dockerls",
         "gopls",
         "harper_ls",
+        "helm_ls",
         "html",
         -- "htmx",  -- borked right now on macos
         "jsonls",
@@ -45,7 +47,7 @@ vim.lsp.enable({
     "harper_ls",
     "helm_ls",
     "html",
-    "htmx",
+    -- "htmx",
     "lua_ls",
     "ruff",
     -- NOTE: allow rustaceanvim to setup
