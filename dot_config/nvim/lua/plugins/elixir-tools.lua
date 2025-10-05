@@ -29,5 +29,6 @@ return {
     end,
     dependencies = {
         "nvim-lua/plenary.nvim",
+        "tpope/vim-projectionist",
     },
 }
