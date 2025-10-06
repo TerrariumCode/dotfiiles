@@ -61,9 +61,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
     callback = function(event)
         local opts = { buffer = event.buf }
+        local builtin = require('telescope.builtin')
 
-        vim.keymap.set("n", "ga", "<cmd>lua require('fzf-lua').lsp_code_actions()<cr>", opts)
-        vim.keymap.set("n", "gd", "<cmd>lua require('fzf-lua').lsp_definitions({ jump1 = true })<cr>", opts)
+        vim.keymap.set("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+        vim.keymap.set("n", "gd", builtin.lsp_definitions, opts)
         vim.keymap.set("n", "gh",
             "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>",
             opts
@@ -72,7 +73,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
             "<cmd>lua require('tiny-inline-diagnostic').toggle()<cr>",
             opts
         )
-        vim.keymap.set("n", "gr", "<cmd>lua require('fzf-lua').lsp_references({ ignore_current_line = true })<cr>", opts)
+        vim.keymap.set("n", "gr", builtin.lsp_references, opts)
         vim.keymap.set("n", "gF", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
         vim.keymap.set("n", "gR", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
     end,
