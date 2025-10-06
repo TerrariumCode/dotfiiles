@@ -73,7 +73,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
             "<cmd>lua require('tiny-inline-diagnostic').toggle()<cr>",
             opts
         )
-        vim.keymap.set("n", "gr", builtin.lsp_references, opts)
+        -- waiting for https://github.com/neovim/neovim/pull/23871
+        -- vim.keymap.set("n", "gr", function() require('telescope.builtin').lsp_references() end,
+        --     { noremap = true, silent = true })
         vim.keymap.set("n", "gF", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
         vim.keymap.set("n", "gR", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
     end,
@@ -294,7 +296,7 @@ vim.lsp.config("yamlls", {
 })
 
 vim.filetype.add({
-  extension = {
-    ['http'] = 'http',
-  },
+    extension = {
+        ['http'] = 'http',
+    },
 })
