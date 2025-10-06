@@ -45,13 +45,16 @@ return {
         wk.add({
             { "<leader>f",  group = "Telescope" },
             { "<leader>fb", "<CMD>Telescope buffers<CR>",                    desc = "Find buffers" },
+            { "<leader>fe", "<CMD>Telescope env<CR>",                        desc = "Find environment variables" },
             { "<leader>fg", "<CMD>AdvancedGitSearch diff_commit_file<CR>",   desc = "Git diff commit file search" },
             { "<leader>fh", function() toggle_telescope(harpoon:list()) end, desc = "Find harpoons" },
+            { "<leader>fH", "<cmd>HTTPCodes<cr>",                            desc = "Find HTTP codes" },
             { "<leader>ff", "<CMD>Telescope find_files<CR>",                 desc = "Find files" },
             { "<leader>fn", "<CMD>ObsidianDailies<CR>",                      desc = "Find obsidian dailies" },
             { "<leader>fs", "<CMD>ScratchList<CR>",                          desc = "Find scratch" },
             { "<leader>ft", "<CMD>Telescope live_grep<CR>",                  desc = "Find text" },
             { "<leader>fw", "<CMD>Telescope grep_string<CR>",                desc = "Find word under cursor" },
+            { "<leader>fy", "<CMD>Telescope neoclip<CR>",                    desc = "Find yanks" },
         })
 
         wk.add({

@@ -51,8 +51,21 @@ return {
                         show_entire_commit = "<C-e>",
                     },
                 },
+                fzf = {
+                    fuzzy = false,                  -- false will only do exact matching
+                    override_generic_sorter = true, -- override the generic sorter
+                    override_file_sorter = true,    -- override the file sorter
+                    case_mode = "smart_case",       -- or "ignore_case" or "respect_case"
+                },
             },
         },
+    },
+    {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = "make",
+        config = function()
+            require("telescope").load_extension("fzf")
+        end,
     },
     {
         "aaronhallaert/advanced-git-search.nvim",
@@ -64,5 +77,21 @@ return {
             "tpope/vim-fugitive",
             "tpope/vim-rhubarb",
         },
+    },
+    {
+        "AckslD/nvim-neoclip.lua",
+        config = function()
+            require("neoclip").setup()
+        end,
+    },
+    {
+        "barrett-ruth/http-codes.nvim",
+        config = true,
+    },
+    {
+        "LinArcX/telescope-env.nvim",
+        config = function ()
+           require("telescope").load_extension("env")
+        end
     },
 }
