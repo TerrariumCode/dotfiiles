@@ -15,7 +15,7 @@ return {
             workspaces = {
                 {
                     name = "personal",
-                    path = "~/Documents/WorkVault/",
+                    path = "~/Documents/ObsiVault/",
                     overrides = {
                         notes_subdir = "dailies",
                     },
@@ -26,7 +26,7 @@ return {
     {
         "leobeosab/brr.nvim",
         opts = {
-            root = vim.fn.expand "~" .. "/Documents/WorkVault/scratches",
+            root = vim.fn.expand "~" .. "/Documents/ObsiVault/scratches",
             style = {
                 width = 0.8,
                 height = 0.8,
