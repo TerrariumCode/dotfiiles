@@ -11,25 +11,26 @@ abbr -a -- dps docker ps
 abbr -a -- hm history merge
 
 # git things
+abbr -a -- gaa git add -A
 abbr -a -- ga git add
 abbr -a -- gau git add -u
-abbr -a -- gaa git add -A
 abbr -a -- gc git commit
+abbr -a -- gclb git clone --bare
+abbr -a -- gcl git clone
 abbr -a -- gcmsg git commit -m
 abbr -a -- gco git checkout
 abbr -a -- gd git diff
-abbr -a -- gp git push
-abbr -a -- gst git status
 abbr -a -- gl git pull
-abbr -a -- gcl git clone
-abbr -a -- gclb git clone --bare
-abbr -a -- grhh git reset --hard
-abbr -a -- grb git rebase
-abbr -a -- grbi git rebase --interactive
+abbr -a -- glg git lg
 abbr -a -- gloga git log --oneline --decorate --graph --all
 abbr -a -- gpf git push --force
-abbr -a -- gwt git worktree
+abbr -a -- gp git push
+abbr -a -- grb git rebase
+abbr -a -- grbi git rebase --interactive
+abbr -a -- grhh git reset --hard
+abbr -a -- gst git status
 abbr -a -- gwta git worktree add
+abbr -a -- gwt git worktree
 abbr -a -- gwtls git worktree list
 abbr -a -- gwtmv git worktree move
 abbr -a -- gwtrm git worktree remove
