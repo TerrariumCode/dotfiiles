@@ -1,12 +1,12 @@
 [user]
-	name = TerrariumCode
+	name = cmac4603
 	email = 12590206+cmac4603@users.noreply.github.com
 {{- if eq .chezmoi.hostname "omarchy" }}
 	signingkey = 4C41CFBBF66BDD2C
 {{- else if eq .chezmoi.hostname "HMILSQ-6T9DLHG6" }}
 	signingkey = B2DCFB0E0C151F82
 {{- else }}
-	signingkey = DD4CD8A7DA163414
+	signingkey = 45904960805CB5CF
 {{- end }}
 
 [commit]
@@ -34,6 +34,9 @@
 	navigate = true  # use n and N to move between diff sections
 	dark = true
 	line-numbers = true
+
+[alias]
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
 
 [merge]
 	conflictStyle = zdiff3
