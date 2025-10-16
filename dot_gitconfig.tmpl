@@ -11,6 +11,10 @@
 
 [commit]
 	gpgsign = true
+{{- if eq .chezmoi.hostname "HMILSQ-6T9DLHG6" }}
+	template = /Users/cmacrae/.gitcommitmsg.txt
+{{- end }}
+	verbose = true
 
 [push]
 	autoSetupRemote = true
@@ -21,10 +25,18 @@
 
 [core]
 	editor = nvim
-	pager = diff-so-fancy | less --tabs=4 -RF
+	pager = delta
 
 [interactive]
-	diffFilter = diff-so-fancy --patch
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true  # use n and N to move between diff sections
+	dark = true
+	line-numbers = true
+
+[merge]
+	conflictStyle = zdiff3
 
 [init]
 	defaultBranch = main
