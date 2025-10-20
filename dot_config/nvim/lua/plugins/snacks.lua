@@ -20,7 +20,7 @@ return {
                         desc = "Harpoon",
                         action = function()
                             local harpoon = require("harpoon")
-                            harpoon.ui:toggle_quick_menu(harpoon:list())
+                            TOGGLE_TELESCOPE(harpoon:list())
                         end
                     },
                     { icon = " ", key = "s", desc = "Restore Session", section = "session" },

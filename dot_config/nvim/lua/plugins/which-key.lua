@@ -14,23 +14,6 @@ return {
         local wk = require("which-key")
         local harpoon = require("harpoon")
 
-        -- telescope function for harpoon
-        local conf = require("telescope.config").values
-        local function toggle_telescope(harpoon_files)
-            local file_paths = {}
-            for _, item in ipairs(harpoon_files.items) do
-                table.insert(file_paths, item.value)
-            end
-            require("telescope.pickers").new({}, {
-                prompt_title = "Harpoon",
-                finder = require("telescope.finders").new_table({
-                    results = file_paths,
-                }),
-                previewer = conf.file_previewer({}),
-                sorter = conf.generic_sorter({}),
-            }):find()
-        end
-
         wk.add({
             { "<leader>a",  group = "AI" },
             { "<leader>aa", "<CMD>CodeCompanionActions<CR>",     desc = "Actions",             mode = { "n", "v" } },
@@ -47,7 +30,7 @@ return {
             { "<leader>fb", "<CMD>Telescope buffers<CR>",                    desc = "Find buffers" },
             { "<leader>fe", "<CMD>Telescope env<CR>",                        desc = "Find environment variables" },
             { "<leader>fg", "<CMD>AdvancedGitSearch diff_commit_file<CR>",   desc = "Git diff commit file search" },
-            { "<leader>fh", function() toggle_telescope(harpoon:list()) end, desc = "Find harpoons" },
+            { "<leader>fh", function() TOGGLE_TELESCOPE(harpoon:list()) end, desc = "Find harpoons" },
             { "<leader>fH", "<cmd>HTTPCodes<cr>",                            desc = "Find HTTP codes" },
             { "<leader>ff", "<CMD>Telescope find_files<CR>",                 desc = "Find files" },
             { "<leader>fn", "<CMD>ObsidianDailies<CR>",                      desc = "Find obsidian dailies" },
@@ -58,12 +41,14 @@ return {
         })
 
         wk.add({
-            { "<leader>g",  group = "Git" },
-            { '<leader>ga', '<cmd>Pipeline<cr>',               desc = 'Open GitHub Actions Pipelines' },
-            { "<leader>gb", "<CMD>BlameToggle window<CR>",     desc = "Git Blame Window" },
-            { "<leader>gf", "<CMD>AdvancedGitSearch<CR>",      desc = "Find Git Commits That Changed The Current File" },
-            { "<leader>gg", function() Snacks.lazygit() end,   desc = "Lazygit" },
-            { "<leader>go", function() Snacks.gitbrowse() end, desc = "Open Remote Git URL" },
+            { "<leader>g",   group = "Git" },
+            { '<leader>ga',  '<cmd>Pipeline<cr>',               desc = 'Open GitHub Actions Pipelines' },
+            { "<leader>gb",  "<CMD>BlameToggle window<CR>",     desc = "Git Blame Window" },
+            { "<leader>gdo", "<CMD>DiffViewOpen<CR>",           desc = "Open DiffView" },
+            { "<leader>gdc", "<CMD>DiffViewClose<CR>",          desc = "Close DiffView" },
+            { "<leader>gf",  "<CMD>AdvancedGitSearch<CR>",      desc = "Find Git Commits That Changed The Current File" },
+            { "<leader>gg",  function() Snacks.lazygit() end,   desc = "Lazygit" },
+            { "<leader>go",  function() Snacks.gitbrowse() end, desc = "Open Remote Git URL" },
         })
 
         wk.add({
