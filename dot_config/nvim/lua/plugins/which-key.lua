@@ -36,6 +36,7 @@ return {
             { "<leader>fn", "<CMD>ObsidianDailies<CR>",                      desc = "Find obsidian dailies" },
             { "<leader>fs", "<CMD>ScratchList<CR>",                          desc = "Find scratch" },
             { "<leader>ft", "<CMD>Telescope live_grep<CR>",                  desc = "Find text" },
+            { "<leader>fT", "<CMD>Telescope toggleterm<CR>",                 desc = "Find terminals" },
             { "<leader>fw", "<CMD>Telescope grep_string<CR>",                desc = "Find word under cursor" },
             { "<leader>fy", "<CMD>Telescope neoclip<CR>",                    desc = "Find yanks" },
         })
