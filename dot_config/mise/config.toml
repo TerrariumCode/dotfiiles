@@ -2,6 +2,7 @@
 elixir = "1.19.0-otp-28"
 erlang = "28.1"
 kind = "latest"
+kubectl = "latest"
 kubectx = "latest"
 kubens = "latest"
 python = "3.13"
