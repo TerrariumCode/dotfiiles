@@ -1,0 +1,12 @@
+[tools]
+elixir = "1.19.0-otp-28"
+erlang = "28.1"
+kind = "latest"
+kubectx = "latest"
+kubens = "latest"
+python = "3.13"
+terraform = "latest"
+usage = "latest"
+
+[settings]
+python.uv_venv_auto = true
