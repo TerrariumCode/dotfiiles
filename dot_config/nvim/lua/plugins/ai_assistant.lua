@@ -47,6 +47,21 @@ return {
                     model = "claude-sonnet-4",
                 },
             },
+            memory = {
+                opts = {
+                    chat = {
+                        enabled = true,
+                    },
+                },
+                claude = {
+                    description = "Memory files for Claude Code users",
+                    parser = "claude",
+                    files = {
+                        "AGENT.md",
+                        "memory-bank/",
+                    },
+                },
+            },
         }
     },
 
