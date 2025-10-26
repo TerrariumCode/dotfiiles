@@ -13,47 +13,6 @@ return {
         opts = {
             adapters = {
                 http = {
-                    copilot = function()
-                        return require("codecompanion.adapters").extend("copilot", {
-                            schema = {
-                                model = {
-                                    default = "claude-3.7-sonnet",
-                                },
-                            },
-                        })
-                    end,
-                    llama3 = function()
-                        return require("codecompanion.adapters").extend("ollama", {
-                            name = "llama3", -- Give this adapter a different name to differentiate it from the default ollama adapter
-                            schema = {
-                                model = {
-                                    default = "llama3:latest",
-                                },
-                                num_ctx = {
-                                    default = 16384,
-                                },
-                                num_predict = {
-                                    default = -1,
-                                },
-                            },
-                        })
-                    end,
-                    qwen3 = function()
-                        return require("codecompanion.adapters").extend("ollama", {
-                            name = "qwen3", -- Give this adapter a different name to differentiate it from the default ollama adapter
-                            schema = {
-                                model = {
-                                    default = "qwen3:latest",
-                                },
-                                num_ctx = {
-                                    default = 16384,
-                                },
-                                num_predict = {
-                                    default = -1,
-                                },
-                            },
-                        })
-                    end,
                     vertex = function()
                         return require("codecompanion.adapters").extend("vertex", {
                             env = {
@@ -71,7 +30,8 @@ return {
             },
             strategies = {
                 chat = {
-                    adapter = "copilot",
+                    name = "copilot",
+                    model = "claude-sonnet-4",
                     tools = {
                         ["mcp"] = {
                             -- Prevent mcphub from loading before needed
@@ -84,6 +44,7 @@ return {
                 },
                 inline = {
                     adapter = "copilot",
+                    model = "claude-sonnet-4",
                 },
             },
         }
