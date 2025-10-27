@@ -1,0 +1,45 @@
+{
+    "$schema": "http://opencode.ai/config.json",
+    "theme": "tokyonight",
+    "share": "manual",
+    "autoupdate": true,
+    "disabled_providers": [
+        "openai"
+    ],
+    "permission": {
+        "edit": "ask",
+        "bash": "ask"
+    },
+    "mcp": {
+        "bigquery": {
+            "type": "local",
+            "command": [
+                "toolbox",
+                "--prebuilt",
+                "bigquery",
+                "--stdio"
+            ],
+            "environment": {
+                "BIGQUERY_PROJECT": "hdm-mediaos-fastly-logs"
+            }
+        },
+        "chrome-devtools": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "chrome-devtools-mcp@latest",
+                "--browserUrl",
+                "http://localhost:12345"
+            ]
+        },
+        "sentry": {
+            "type": "local",
+            "command": [
+                "npx",
+                "mcp-remote@latest",
+                "https://mcp.sentry.dev/sse"
+            ]
+        }
+    }
+}
