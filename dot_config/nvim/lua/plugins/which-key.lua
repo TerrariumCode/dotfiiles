@@ -89,6 +89,14 @@ return {
             { "<leader>ds", "<cmd>lua require('dap-python').debug_selection()<cr>", desc = "Python Debug Selection", mode = "v" },
         })
 
+        wk.add({
+            { "<leader>D",  group = "DB" },
+            { "<leader>da", "<CMD>DBUIAddConnection<CR>", desc = "DBUI Add Connection" },
+            { "<leader>db", "<CMD>DBUI<CR>",              desc = "DBUI" },
+            { "<leader>df", "<CMD>DBUIFindBufffer<CR>",   desc = "DBUI Find Buffer" },
+            { "<leader>dt", "<CMD>DBUIToggle<CR>",        desc = "DBUI Toggle" },
+        })
+
         -- random assortment
         wk.add({
             { "<leader>oo",  "<CMD>silent !tmux-sessionizer -s 0 --vsplit<CR>", desc = "Open Opencode In New Tmux Pane" },
