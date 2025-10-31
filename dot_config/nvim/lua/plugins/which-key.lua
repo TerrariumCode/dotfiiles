@@ -33,6 +33,7 @@ return {
             { "<leader>fh", function() TOGGLE_TELESCOPE(harpoon:list()) end, desc = "Find harpoons" },
             { "<leader>fH", "<cmd>HTTPCodes<cr>",                            desc = "Find HTTP codes" },
             { "<leader>ff", "<CMD>Telescope find_files<CR>",                 desc = "Find files" },
+            { "<leader>fk", "<CMD>Telescope keymaps<CR>",                    desc = "Find keymaps" },
             { "<leader>fn", "<CMD>ObsidianDailies<CR>",                      desc = "Find obsidian dailies" },
             { "<leader>fs", "<CMD>ScratchList<CR>",                          desc = "Find scratch" },
             { "<leader>ft", "<CMD>Telescope live_grep<CR>",                  desc = "Find text" },
