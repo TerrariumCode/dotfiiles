@@ -1,6 +1,6 @@
 [tools]
-elixir = "1.19.0-otp-28"
-erlang = "28.1"
+elixir = "latest"
+erlang = "latest"
 kind = "latest"
 kubectl = "latest"
 kubectx = "latest"
@@ -11,3 +11,4 @@ usage = "latest"
 
 [settings]
 python.uv_venv_auto = true
+experimental = true
