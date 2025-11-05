@@ -91,10 +91,10 @@ return {
 
         wk.add({
             { "<leader>D",  group = "DB" },
-            { "<leader>da", "<CMD>DBUIAddConnection<CR>", desc = "DBUI Add Connection" },
-            { "<leader>db", "<CMD>DBUI<CR>",              desc = "DBUI" },
-            { "<leader>df", "<CMD>DBUIFindBufffer<CR>",   desc = "DBUI Find Buffer" },
-            { "<leader>dt", "<CMD>DBUIToggle<CR>",        desc = "DBUI Toggle" },
+            { "<leader>Da", "<CMD>DBUIAddConnection<CR>", desc = "DBUI Add Connection" },
+            { "<leader>Db", "<CMD>DBUI<CR>",              desc = "DBUI" },
+            { "<leader>Df", "<CMD>DBUIFindBufffer<CR>",   desc = "DBUI Find Buffer" },
+            { "<leader>Dt", "<CMD>DBUIToggle<CR>",        desc = "DBUI Toggle" },
         })
 
         -- random assortment
