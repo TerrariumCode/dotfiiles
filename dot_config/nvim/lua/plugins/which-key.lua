@@ -26,54 +26,6 @@ return {
         })
 
         wk.add({
-            { "<leader>f",  group = "Telescope" },
-            { "<leader>fb", "<CMD>Telescope buffers<CR>",                    desc = "Find buffers" },
-            { "<leader>fe", "<CMD>Telescope env<CR>",                        desc = "Find environment variables" },
-            { "<leader>fg", "<CMD>AdvancedGitSearch diff_commit_file<CR>",   desc = "Git diff commit file search" },
-            { "<leader>fh", function() TOGGLE_TELESCOPE(harpoon:list()) end, desc = "Find harpoons" },
-            { "<leader>fH", "<cmd>HTTPCodes<cr>",                            desc = "Find HTTP codes" },
-            { "<leader>ff", "<CMD>Telescope find_files<CR>",                 desc = "Find files" },
-            { "<leader>fk", "<CMD>Telescope keymaps<CR>",                    desc = "Find keymaps" },
-            { "<leader>fn", "<CMD>ObsidianDailies<CR>",                      desc = "Find obsidian dailies" },
-            { "<leader>fs", "<CMD>ScratchList<CR>",                          desc = "Find scratch" },
-            { "<leader>ft", "<CMD>Telescope live_grep<CR>",                  desc = "Find text" },
-            { "<leader>fT", "<CMD>Telescope toggleterm<CR>",                 desc = "Find terminals" },
-            { "<leader>fw", "<CMD>Telescope grep_string<CR>",                desc = "Find word under cursor" },
-            { "<leader>fy", "<CMD>Telescope neoclip<CR>",                    desc = "Find yanks" },
-        })
-
-        wk.add({
-            { "<leader>g",   group = "Git" },
-            { '<leader>ga',  '<cmd>Pipeline<cr>',               desc = 'Open GitHub Actions Pipelines' },
-            { "<leader>gb",  "<CMD>BlameToggle window<CR>",     desc = "Git Blame Window" },
-            { "<leader>gdo", "<CMD>DiffviewOpen<CR>",           desc = "Open DiffView" },
-            { "<leader>gdc", "<CMD>DiffviewClose<CR>",          desc = "Close DiffView" },
-            { "<leader>gf",  "<CMD>AdvancedGitSearch<CR>",      desc = "Find Git Commits That Changed The Current File" },
-            { "<leader>gg",  function() Snacks.lazygit() end,   desc = "Lazygit" },
-            { "<leader>go",  function() Snacks.gitbrowse() end, desc = "Open Remote Git URL" },
-        })
-
-        wk.add({
-            { "<leader>h",  group = "Harpoon" },
-            { "<leader>hh", function() harpoon:list():add() end,                         desc = "Harpoon it!" },
-            { "<leader>hm", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, desc = "Menu" },
-        })
-
-        wk.add({
-            { "<leader>m",  group = "Markdown" },
-            { "<leader>mt", "<CMD>RenderMarkdown toggle<CR>", desc = "Split Toggle" },
-        })
-
-        wk.add({
-            { "<leader>.", "<CMD>Scratch<CR>", desc = "Open Daily Scratch" },
-        })
-
-        wk.add({
-            { "<leader>u",  group = "UndoTree" },
-            { "<leader>ut", "<CMD>UndotreeToggle<CR>", desc = "Toggle" },
-        })
-
-        wk.add({
             { "<leader>d",  group = "Debugger" },
             { "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>",        desc = "Toggle Breakpoint" },
             { "<leader>dc", "<cmd>lua require'dap'.continue()<cr>",                 desc = "Continue" },
@@ -95,6 +47,55 @@ return {
             { "<leader>Db", "<CMD>DBUI<CR>",              desc = "DBUI" },
             { "<leader>Df", "<CMD>DBUIFindBufffer<CR>",   desc = "DBUI Find Buffer" },
             { "<leader>Dt", "<CMD>DBUIToggle<CR>",        desc = "DBUI Toggle" },
+        })
+
+        wk.add({
+            { "<leader>f",  group = "Find" },
+            { "<leader>fb", "<CMD>Telescope buffers<CR>",                    desc = "Find buffers" },
+            { "<leader>fe", "<CMD>Telescope env<CR>",                        desc = "Find environment variables" },
+            { "<leader>fg", "<CMD>AdvancedGitSearch diff_commit_file<CR>",   desc = "Git diff commit file search" },
+            { "<leader>fh", function() TOGGLE_TELESCOPE(harpoon:list()) end, desc = "Find harpoons" },
+            { "<leader>fH", "<cmd>HTTPCodes<cr>",                            desc = "Find HTTP codes" },
+            { "<leader>ff", "<CMD>Telescope find_files<CR>",                 desc = "Find files" },
+            { "<leader>fk", "<CMD>Telescope keymaps<CR>",                    desc = "Find keymaps" },
+            { "<leader>fn", "<CMD>ObsidianDailies<CR>",                      desc = "Find obsidian dailies" },
+            { "<leader>fs", "<CMD>ScratchList<CR>",                          desc = "Find scratch" },
+            { "<leader>ft", "<CMD>Telescope live_grep<CR>",                  desc = "Find text" },
+            { "<leader>fT", "<CMD>Telescope toggleterm<CR>",                 desc = "Find terminals" },
+            { "<leader>fw", "<CMD>Telescope grep_string<CR>",                desc = "Find word under cursor" },
+            { "<leader>fy", "<CMD>Telescope neoclip<CR>",                    desc = "Find yanks" },
+        })
+
+        wk.add({
+            { "<leader>g",   group = "Git" },
+            { '<leader>ga',  '<cmd>Pipeline<cr>',               desc = 'Open GitHub Actions Pipelines' },
+            { "<leader>gb",  "<CMD>BlameToggle window<CR>",     desc = "Git Blame Window" },
+            { "<leader>gdc", "<CMD>DiffviewClose<CR>",          desc = "Close DiffView" },
+            { "<leader>gdo", "<CMD>DiffviewOpen<CR>",           desc = "Open DiffView" },
+            { "<leader>gf",  "<CMD>AdvancedGitSearch<CR>",      desc = "Find Git Commits That Changed The Current File" },
+            { "<leader>gg",  function() Snacks.lazygit() end,   desc = "Lazygit" },
+            { "<leader>go",  function() Snacks.gitbrowse() end, desc = "Open Remote Git URL" },
+            { "<leader>gp",  function() vim.fn.jobstart("gh pr view --web", { detach = true }) end, desc = "Open Github PR" },
+        })
+
+        wk.add({
+            { "<leader>h",  group = "Harpoon" },
+            { "<leader>hh", function() harpoon:list():add() end,                         desc = "Harpoon it!" },
+            { "<leader>hm", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, desc = "Menu" },
+        })
+
+        wk.add({
+            { "<leader>m",  group = "Markdown" },
+            { "<leader>mt", "<CMD>RenderMarkdown toggle<CR>", desc = "Split Toggle" },
+        })
+
+        wk.add({
+            { "<leader>.", "<CMD>Scratch<CR>", desc = "Open Daily Scratch" },
+        })
+
+        wk.add({
+            { "<leader>u",  group = "UndoTree" },
+            { "<leader>ut", "<CMD>UndotreeToggle<CR>", desc = "Toggle" },
         })
 
         -- random assortment
