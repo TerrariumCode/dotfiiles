@@ -38,7 +38,6 @@ require("mason-lspconfig").setup({
         "cssls",
         "dockerls",
         "gopls",
-        "harper_ls",
         "helm_ls",
         "html",
         -- "htmx",  -- borked right now on macos
@@ -62,7 +61,6 @@ vim.lsp.enable({
     "djlint",
     "dockerls",
     "gopls",
-    "harper_ls",
     "helm_ls",
     "html",
     -- "htmx",
@@ -108,18 +106,6 @@ vim.lsp.config("gopls", {
             unusedParams = true,
         },
     },
-})
-
--- HARPER - spellchecker
-vim.lsp.config("harper_ls", {
-    settings = {
-        ["harper-ls"] = {
-            linters = {
-                SentenceCapitalization = false,
-                SpellCheck = false
-            }
-        }
-    }
 })
 
 -- HELM
