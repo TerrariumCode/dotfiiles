@@ -5,10 +5,5 @@ kind = "latest"
 kubectl = "latest"
 kubectx = "latest"
 kubens = "latest"
-python = "3.13"
 terraform = "latest"
 usage = "latest"
-
-[settings]
-python.uv_venv_auto = true
-experimental = true
