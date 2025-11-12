@@ -73,6 +73,7 @@ return {
             { "<leader>gdc", "<CMD>DiffviewClose<CR>",                                              desc = "Close DiffView" },
             { "<leader>gdh", ":DiffviewOpen HEAD~",                                                 desc = "Open DiffView incl. last x commits" },
             { "<leader>gdo", "<CMD>DiffviewOpen<CR>",                                               desc = "Open DiffView" },
+            { "<leader>gdr", ":DiffviewOpen ",                                                      desc = "Open DiffView by range/sha" },
             { "<leader>gf",  "<CMD>AdvancedGitSearch<CR>",                                          desc = "Find Git Commits That Changed The Current File" },
             { "<leader>gg",  function() Snacks.lazygit() end,                                       desc = "Lazygit" },
             { "<leader>go",  function() Snacks.gitbrowse() end,                                     desc = "Open Remote Git URL" },
