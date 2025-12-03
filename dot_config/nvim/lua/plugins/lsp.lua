@@ -29,7 +29,7 @@ return {
     --     },
     -- },
 
-    -- Golang
+    -- golang
     {
         "olexsmir/gopher.nvim",
         ft = "go",
@@ -39,6 +39,20 @@ return {
         end,
         ---@type gopher.Config
         opts = {},
+    },
+
+    -- rust
+    -- With lazy.nvim
+    {
+        "alexpasmantier/krust.nvim",
+        ft = "rust",
+        opts = {
+            keymap = "<leader>k",
+            float_win = {
+                border = "rounded", -- Border style: "none", "single", "double", "rounded", "solid", "shadow"
+                auto_focus = false,
+            },
+        },
     },
 
     {
